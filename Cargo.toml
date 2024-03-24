@@ -1,0 +1,12 @@
+
+[workspace]
+members = ["tcpserver", "tcpclient"]
+resolver = "2"
+
+[workspace.package]
+name = "ipserver"
+version = "0.0.1"
+edition = "2021"
+description = "Server show your ip"
+license = "MIT"
+categories = ["server"]
