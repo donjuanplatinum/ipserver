@@ -1,0 +1,12 @@
+* IpServer
+** Use
+*** Server
+#+begin_src shell
+  cargo build
+  ./target/debug/tcpserver
+#+end_src
+*** Client
+#+begin_src shell
+  cargo build
+  ./target/debug/tcpclient
+#+end_src
