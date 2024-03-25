@@ -3,7 +3,8 @@
 *** Server
 #+begin_src shell
   cargo build
-  ./target/debug/tcpserver
+  ./target/debug/tcpserver --help
+  ./target/debug/tcpserver 0.0.0.0:3000
 #+end_src
 *** Client
 #+begin_src shell
