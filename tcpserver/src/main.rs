@@ -3,8 +3,9 @@ use std::io::{Read,Write};
 use std::str;
 use std::net::SocketAddr;
 fn main() {
-    let listener: TcpListener =TcpListener::bind("0.0.0.0:3000").unwrap();
-    println!("bind on 0.0.0.0:3000");
+    let address: String = config();
+    let listener: TcpListener =TcpListener::bind(&address).unwrap();
+    println!("bind on {}",address);
 
     for stream in listener.incoming() {
 	let mut stream = stream.unwrap();
@@ -41,3 +42,19 @@ fn main() {
     }
 }
 
+//parse command
+fn config() -> String{
+    use std::env;
+    use std::env::Args;
+    let args: Args = env::args();
+    let mut vec: Vec<String> = vec!();
+    for args in args {
+	vec.push(args);
+    }
+    if vec.len() < 2 {
+	panic!("Usage: {} server_address",&vec[0]);
+    }
+    let server_address: String = env::args().nth(1).unwrap();
+    println!("server_address is {:?}",server_address);
+    server_address
+}
