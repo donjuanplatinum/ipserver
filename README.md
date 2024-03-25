@@ -1,16 +1,16 @@
-* IpServer
-** Use
-*** Server
-#+begin_src shell
+# IpServer
+## Use
+### Server
+```
   cargo build
   ./target/debug/tcpserver --help
   ./target/debug/tcpserver 0.0.0.0:3000
-#+end_src
-*** Client
-#+begin_src shell
+```
+### Client
+```
   cargo build
   ./target/debug/tcpclient --help
   ./target/debug/tcpclient 127.0.0.1:3000
-#+end_src
-*** Short
-[[file:resources/short.png][short]]
+```
+### Short
+![ShortCut](resources/short.png)
