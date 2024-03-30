@@ -19,7 +19,7 @@ fn config() -> String{
     for args in args {
 	vec.push(args);
     }
-    if vec.len() > 1 && vec[1].contains("--help") {
+    if vec.len() > 1 && vec.contains(&"--help".to_string()) {
 	help(&vec);
     }
 
